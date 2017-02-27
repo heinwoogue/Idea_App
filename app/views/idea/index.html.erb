@@ -2,7 +2,7 @@
 <div class="page-header">
   <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
-<table class="table table-striped table-bordered table-striped">
+<table class="table table-striped table-bordered">
   <thead>
     <tr>
       <th><%= model_class.human_attribute_name(:id) %></th>
@@ -23,9 +23,9 @@
         <td><%=l idea.created_at %></td>
         <td>
           <%= link_to t('.show', :default => t("helpers.links.show")),
-                      idea_path(idea), :class => 'btn btn-info btn-xs' %>
+                      idea_path(idea), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.edit', :default => t("helpers.links.edit")),
-                      edit_idea_path(idea), :class => 'btn btn-success btn-xs' %>
+                      edit_idea_path(idea), :class => 'btn btn-default btn-xs' %>
           <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
                       idea_path(idea),
                       :method => :delete,
@@ -40,3 +40,4 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_idea_path,
             :class => 'btn btn-primary' %>
+<button class="btn btn-primary">Yey</button>
